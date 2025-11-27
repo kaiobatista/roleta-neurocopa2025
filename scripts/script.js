@@ -245,7 +245,7 @@ resetBtn.addEventListener('click', () => {
   if (confirm('Redefinir opções?')) {
     options = JSON.parse(JSON.stringify(optionsDefault));
     buildWheel();
-    selectedBox.textContent = 'Pronto para girar 🎯';
+    selectedBox.textContent = 'Opção selecionada';
   }
 });
 
