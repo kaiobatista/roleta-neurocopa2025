@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Roleta — Neurocopa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header id="titulo">
+    <h1>Neurocopa - 2025</h1>
+  </header>
+  <div class="container" role="application" aria-label="Roleta interativa">
+    <div class="left">
+      <div class="wheel-wrap">
+        <div class="pointer" aria-hidden="true"></div>
+        <div id="wheel" class="wheel" aria-hidden="false">
+          <!-- Segments serão gerados por JS -->
+        </div>
+        <div class="center-knob">GIRE</div>
+        <div class="confetti" id="confetti" aria-hidden="true"></div>
+      </div>
+
+      <div class="controls">
+        <button id="spin" class="btn" title="Girar a roleta">Girar</button>
+        <button id="addOption" class="btn" style="background:transparent;border:1px solid rgba(255,255,255,0.06);">+ Adicionar</button>
+        <button id="resetBtn" class="btn" style="background:transparent;border:1px solid rgba(255,255,255,0.06);">Redefinir</button>
+      </div>
+    </div>
+
+    <aside class="info" aria-labelledby="title">
+      <h1 id="title">Roleta da Neurocopa</h1>
+      <p>Clique em <strong>Girar</strong> para iniciar.</p>
+
+      <div class="selected" id="selected">Opção selecionada</div>
+
+      <div style="width:100%">
+        <div style="display:flex;gap:8px;align-items:center;justify-content:space-between">
+          <strong>Opções</strong>
+          <div style="font-size:12px;color:#9fb6d2">Arraste para reorganizar (desktop)</div>
+        </div>
+        <div class="options-list" id="optionsList"></div>
+      </div>
+
+      <footer>A opção selecionada representará o valor pelo qual a pontuação da questão será multiplicada.</footer>
+    </aside>
+  </div>
+  <div id="patrocinadores">
+    <img id="jornada" src="images/width_800.png" alt="Imagem 1">
+    <img id="inst_glass" src="images/width_200.png" alt="Imagem 2">
+  </div>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
